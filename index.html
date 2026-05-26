@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #2ecc71, #f1c40f);
+            background-size: 400% 400%;
+            animation: fundoAgro 15s ease infinite;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        /* Animação do Fundo (Amanhecer/Tecnologia no Campo) */
+        @keyframes fundoAgro {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Efeito de Partículas (Folhas/Crescimento subindo) */
+        .particulas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .particula {
+            position: absolute;
+            bottom: -10px;
+            background: rgba(46, 204, 113, 0.4);
+            border-radius: 50%;
+            animation: flutuar 8s infinite ease-in-out;
+        }
+
+        @keyframes flutuar {
+            0% {
+                transform: translateY(0) translateX(0) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Conteúdo Principal */
+        main {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-grow: 1;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.25); /* Película para dar leitura ao texto */
+            backdrop-filter: blur(3px);
+        }
+
+        .container {
+            max-width: 900px;
+            animation: preencher 1.5s ease-out;
+        }
+
+        @keyframes preencher {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Título Principal Impactante */
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 span {
+            color: #2ecc71; /* Verde Sustentável */
+            display: block;
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+            text-shadow: 0 0 15px rgba(46, 204, 113, 0.6);
+        }
+
+        /* Subtítulo */
+        p.subtitulo {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #f1c40f; /* Amarelo Ouro/Sol/Safra */
+            margin-bottom: 40px;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Cards Informativos */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-100px); /* Pequeno pulo ao passar o mouse */
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+        /* Rodapé */
+        footer {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h1 span { font-size: 2.3rem; }
+            p.subtitulo { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="particulas">
+        <div class="particula" style="width: 15px; height: 15px; left: 10%; animation-delay: 0s; animation-duration: 6s;"></div>
+        <div class="particula" style="width: 25px; height: 25px; left: 25%; animation-delay: 2s; animation-duration: 9s;"></div>
+        <div class="particula" style="width: 10px; height: 10px; left: 40%; animation-delay: 1s; animation-duration: 5s;"></div>
+        <div class="particula" style="width: 20px; height: 20px; left: 60%; animation-delay: 4s; animation-duration: 8s;"></div>
+        <div class="particula" style="width: 30px; height: 30px; left: 75%; animation-delay: 0s; animation-duration: 11s;"></div>
+        <div class="particula" style="width: 15px; height: 15px; left: 90%; animation-delay: 3s; animation-duration: 7s;"></div>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1><span>Agro Forte</span> Futuro Sustentável</h1>
+            <p class="subtitulo">O equilíbrio perfeito entre a alta produção e a preservação do meio ambiente</p>
+            
+            <div class="cards">
+                <div class="card">
+                    <h3>Tecnologia no Campo</h3>
+                    <p>Drones, sensores e IA otimizando o uso de água e insumos para proteger o solo.</p>
+                </div>
+                <div class="card">
+                    <h3>Energia Limpa</h3>
+                    <p>Biomassa e energia solar movendo as fazendas do futuro com pegada de carbono zero.</p>
+                </div>
+                <div class="card">
+                    <h3>Preservação Ativa</h3>
+                    <p>Rotação de culturas e manejo direto garantindo a saúde das florestas e rios.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Consciência Ambiental & Produtividade. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
